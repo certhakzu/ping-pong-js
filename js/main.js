@@ -228,3 +228,11 @@ document.addEventListener("keydown",function(ev){
 
 
 board_view.draw(); 
+
+
+window.requestAnimationFrame(controller);
+
+function controller(){
+	board_view.play();
+	requestAnimationFrame(controller);
+}
